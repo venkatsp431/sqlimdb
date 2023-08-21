@@ -1,0 +1,67 @@
+INSERT INTO Movies (movie_id, title, release_date)
+VALUES
+  (1, 'The Shawshank Redemption', '1994-09-10'),
+  (2, 'Inception', '2010-07-08'),
+  (3, 'Pulp Fiction', '1994-10-14');
+
+INSERT INTO Media (movie_id, type, url)
+VALUES (1, 'Video', 'http://shawshaw.com/movie1.mp4'),
+       (2, 'Image', 'http://inception.com/movie1.jpg');
+
+INSERT INTO Genres (name)
+VALUES
+  ('Drama'),
+  ('Crime'),
+  ('Thriller'),
+  ('Action');
+
+INSERT INTO MovieGenres (movie_id, genre_id)
+VALUES
+  (1, 1), -- The Shawshank Redemption: Drama
+  (1, 2), -- The Shawshank Redemption: Crime
+  (2, 3), -- Inception: Thriller
+  (2, 4), -- Inception: Action
+  (3, 1), -- Pulp Fiction: Drama
+  (3, 2), -- Pulp Fiction: Crime
+  (3, 3); -- Pulp Fiction: Thriller
+
+
+INSERT INTO Users (username, email)
+VALUES
+  ('kiki', 'kiki@yu.com'),
+  ('zee', 'zee@yu.com'),
+  ('vinc', 'vinc@yu.com');
+
+INSERT INTO Reviews (movie_id, user_id, rating, comment)
+VALUES
+  (1, 1, 5, 'Absolutely brilliant!'),
+  (1, 2, 4, 'A classic that never gets old.'),
+  (2, 3, 5, 'Mind-bending movie experience.'),
+  (3, 1, 4, 'Quirky and entertaining.'),
+  (3, 2, 3, 'Some scenes were confusing.');
+
+
+INSERT INTO Artists (name)
+VALUES
+  ('Tim Robbins'),
+  ('Morgan Freeman'),
+  ('Christopher Nolan'),
+  ('Leonardo DiCaprio'),
+  ('Quentin Tarantino');
+
+INSERT INTO ArtistSkills (artist_id, skill)
+VALUES
+  (1, 'Acting'),
+  (2, 'Acting'),
+  (3, 'Directing'),
+  (4, 'Acting'),
+  (5, 'Directing');
+
+INSERT INTO FilmRoles (artist_id, movie_id, role)
+VALUES
+  (1, 1, 'Actor'), 
+  (2, 1, 'Actor'), 
+  (3, 2, 'Director'), 
+  (4, 2, 'Actor'),
+  (5, 3, 'Director'), 
+  (5, 3, 'Actor'); 
